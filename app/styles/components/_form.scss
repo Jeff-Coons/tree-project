@@ -1,0 +1,98 @@
+/**
+ * Form Styles
+ */
+
+
+.Form {
+    @include cf();
+
+    input[type="text"] {
+        appearance: none;
+        border: 0;
+        border-radius: 5px;
+        outline: 0;
+        padding: 0.75em;
+
+        & + label {
+            position: absolute;
+            top: 50%;
+            left: 0.75em;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    input[type="checkbox"] {
+        position: absolute;
+        left: -9999px;
+
+        & + label {
+            cursor: pointer;
+            line-height: 15px;
+            padding-left: 30px;
+
+            &:before {
+                content: '';
+                width: 15px;
+                height: 15px;
+                border: solid 2px $gray-dk;
+                border-radius: 4px;
+                left: 0;
+                transform: translateY(-50%);
+                transition: border-color 0.3s ease, transform 0.3s ease;
+            }
+
+            &:after {
+                content: '\f00c';
+                font-family: 'fontawesome';
+                font-size: 1.25em;
+                color: $gray-dk;
+                line-height: 15px;
+                left: 2px;
+                opacity: 0;
+                transform: scale(0) translateY(-50%);
+                transform-origin: center;
+                transition: color 0.3s ease, transform 0.3s ease;
+            }
+
+            &:before,
+            &:after {
+                position: absolute;
+                top: 50%;
+            }
+        }
+
+        &:checked + label {
+            &:before {
+                border-color: $color-primary;
+            }
+
+            &:after {
+                color: $color-primary;
+                opacity: 1;
+                transform: scale(1) translateY(-50%);
+            }
+        }
+    }
+
+    button {
+        appearance: none;
+        background: none;
+        border: 0;
+        cursor: pointer;
+        outline: 0;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+
+        i {
+            color: $color-primary;
+        }
+    }
+}
+
+
+.Form-input {
+    position: relative;
+}

@@ -1,0 +1,86 @@
+.tree-container  {
+    background-color: $white;
+    border: solid 1px $border-color;
+    border-radius: 7px;
+    box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: auto;
+    min-width: 30vw;
+    min-height: 80vh;
+}
+
+.tree {
+    border-top: solid 1px $border-color;
+    padding: 1rem;
+
+    .tree-root {
+        padding-left: 0;
+    }
+}
+
+.tree-item {
+    color: $color-tertiary;
+    display: block;
+    vertical-align: text-top;
+    padding: {
+        top: 1vh;
+        bottom: 1vh;
+    }
+
+    &.has-children {
+        position: relative;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            background: url('/images/icons/icon-sprite.png');
+            background-repeat: no-repeat;
+            height: 12px;
+            width: 9px;
+        }
+
+        &[data-subfolder="open"]:before {
+            background-position: -72px 0px;
+        }
+
+        &[data-subfolder="closed"]:before {
+            background-position: -58px 0px;
+        }
+    }
+}
+
+.tree-icon {
+    background: url('/images/icons/icon-sprite.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 14px;
+    margin: {
+        left: 0.35em;
+        right: 0.5em;
+    }
+    width: 14px;
+
+    &--folder {
+        background-position: 0px 0px;
+    }
+
+    &--file {
+        background-position: -28px 0px;
+    }
+
+    &--private {
+        background-position: -14px 0px;
+    }
+}
+
+.tree-actions {
+    align-items: center;
+    border-top: solid 1px $border-color;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 1rem;
+}

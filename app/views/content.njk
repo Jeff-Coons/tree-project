@@ -1,0 +1,54 @@
+<section class="tree-container" action="">
+
+    <section class="tree-details Form">
+        <div class="Form-input tree-details--title">
+            <input type="file" name="title" id="title" accept="*.html" required>
+            {# <input type="text" name="title" id="title" required> #}
+            <label for="title">Title</label>
+        </div>
+        <div class="Form-input tree-details--label">
+            <input type="text" name="label" id="label" value="" required>
+            <label for="label">Label</label>
+        </div>
+    </section>
+
+    <section class="tree">
+        <ul class="tree-root">
+            <li>
+                <a class="tree-item tree-item--root has-children" data-node-type="dom-element" role="button" data-subfolder="open">
+                    <i class="tree-icon tree-icon--folder"></i>Folder One
+                </a>
+
+                <ul>
+                    <li>
+                        <a class="tree-item tree-item--root has-children" data-node-type="dom-element" role="button" data-subfolder="open">
+                            <i class="tree-icon tree-icon--folder"></i>Sub-Folder One
+                        </a>
+
+                        <ul>
+                            <li class="tree-item" data-node-type="text-element">
+                                <i class="tree-icon tree-icon--file"></i>List One
+                            </li>
+                            <li class="tree-item" data-node-type="text-element">
+                                <i class="tree-icon tree-icon--file"></i>List Two
+                            </li>
+                            <li class="tree-item" data-node-type="text-element">
+                                <i class="tree-icon tree-icon--file"></i>List Three
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="tree-item tree-list--private has-children" data-subfolder="closed" role="button">
+                    <i class="tree-icon tree-icon--private"></i>Private Folder
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="tree-actions">
+        <a role="button" class="link--primary">Link</a>
+        <a role="button" class="btn">Done</a>
+    </section>
+</section>

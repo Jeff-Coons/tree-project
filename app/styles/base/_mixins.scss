@@ -1,0 +1,17 @@
+@mixin cf() {
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin site-center {
+    max-width: $site-width;
+    margin: 0 auto;
+
+    @media #{$sitewidth-up} {
+        margin: 0 calc((80vw - 1300px) / 2) 0 calc((100vw - 1300px) / 2);
+    }
+}

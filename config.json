@@ -1,0 +1,6 @@
+{
+    "autoprefixer": {
+        "browsers": "last 5 versions",
+        "ie": "> 7"
+    }
+}

@@ -1,0 +1,33 @@
+/**
+ * Media Query Settings
+ */
+
+$range-mobile: ($mobile, 739px); // second value is ($tablet - 1px)
+$range-tablet: ($tablet, 1023px); // second value is ($desktop - 1px)
+$range-desktop: ($desktop, 1299px); // second value is ($site-width - 1px)
+$range-sitewidth: ($site-width, 1499px); // second value is ($wide - 1px)
+$range-wide: ($wide, 1799px); // second value is ($very-wide - 1px)
+
+$portrait: "and (orientation: portrait)";
+$landscape: "and (orientation: landscape)";
+
+$mobile-up: "all and (min-width: #{nth($range-mobile, 1)})";
+$mobile-only: "all and (min-width: #{nth($range-mobile, 1)}) and (max-width: #{nth($range-mobile, 2)})";
+
+$tablet-down: "all and (max-width: #{nth($range-mobile, 2)})";
+$tablet-up: "all and (min-width: #{nth($range-tablet, 1)})";
+$tablet-only: "all and (min-width: #{nth($range-tablet, 1)}) and (max-width: #{nth($range-tablet, 2)})";
+
+$desktop-down: "all and (max-width: #{nth($range-tablet, 2)})";
+$desktop-up: "all and (min-width: #{nth($range-desktop, 1)})";
+$desktop-only: "all and (min-width: #{nth($range-desktop, 1)}) and (max-width: #{nth($range-desktop, 2)})";
+
+$sitewidth-down: "all and (max-width: #{nth($range-desktop, 2)})";
+$sitewidth-up: "all and (min-width: #{nth($range-sitewidth, 1)})";
+$sitewidth-only: "all and (min-width: #{nth($range-sitewidth, 1)}) and (max-width: #{nth($range-sitewidth, 2)})";
+
+$wide-down: "all and (max-width: #{nth($range-sitewidth, 2)})";
+$wide-up: "all and (min-width: #{nth($range-wide, 1)})";
+$wide-only: "all and (min-width: #{nth($range-wide, 1)}) and (max-width: #{nth($range-wide, 2)})";
+
+$very-wide-up: "all and (min-width: #{$very-wide})";
