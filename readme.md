@@ -1,4 +1,4 @@
-# Static Site Build
+# HTML Tree Project
 <br />
 
 ## Start Developing
